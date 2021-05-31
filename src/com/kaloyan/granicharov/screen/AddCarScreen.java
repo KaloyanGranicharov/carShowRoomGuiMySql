@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
-import java.util.Locale;
 import java.util.Objects;
 
 public class AddCarScreen extends javax.swing.JFrame{
@@ -205,7 +204,7 @@ public class AddCarScreen extends javax.swing.JFrame{
         jButton1.setText("Submit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
@@ -214,7 +213,7 @@ public class AddCarScreen extends javax.swing.JFrame{
         jButton2.setText("Clear");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
@@ -253,16 +252,8 @@ public class AddCarScreen extends javax.swing.JFrame{
         pack();
     }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-        this.setVisible(false);
-        new ClientScreen().setVisible(true);
-    }
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
-        Clear();
-    }
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         String cb=carBrand.getText().toUpperCase();
         String cm=carModel.getText().toUpperCase();
         String mile=mileage.getText().toUpperCase();
@@ -300,6 +291,17 @@ public class AddCarScreen extends javax.swing.JFrame{
             System.exit(0);
         }
     }
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        Clear();
+    }
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.setVisible(false);
+        new ClientScreen().setVisible(true);
+    }
+
+
     private void imageFocusGained(java.awt.event.FocusEvent evt) {
     }
 
@@ -365,5 +367,6 @@ public class AddCarScreen extends javax.swing.JFrame{
 
 
 }
+
 
 
