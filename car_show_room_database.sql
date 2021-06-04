@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS carShowRoomDatabase;
+CREATE DATABASE IF NOT EXISTS car_show_room_databasecar_details;
 
-DROP TABLE IF EXISTS `cardetails`;
-CREATE TABLE `cardetails` (
+DROP TABLE IF EXISTS `car_details`;
+CREATE TABLE `car_details` (
   `car_Brand` varchar(25) DEFAULT NULL,
   `car_Model` varchar(30) DEFAULT NULL,
   `Mileage` varchar(8) DEFAULT NULL,
@@ -14,4 +14,3 @@ CREATE TABLE `cardetails` (
   `Prise` varchar(15) DEFAULT NULL,
   `fuel_Type` varchar(10) DEFAULT NULL
 );
-

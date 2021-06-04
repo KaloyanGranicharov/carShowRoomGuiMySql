@@ -11,7 +11,7 @@ public class AudioPlayer extends JFrame implements LineListener {
 
 
     public void play() {
-        File audioFile = new File("C:\\Users\\Desislava\\Desktop\\carShowRoomGuiMySql\\src\\com\\kaloyan\\granicharov\\audio/still_dre.wav");
+        File audioFile = new File("C:\\Users\\Desislava\\Desktop\\proekti\\carShowRoomGuiMySql\\src\\com\\kaloyan\\granicharov\\audio/still_dre.wav");
 
         try {
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
@@ -27,6 +27,7 @@ public class AudioPlayer extends JFrame implements LineListener {
             audioClip.open(audioStream);
 
             audioClip.start();
+            audioClip.loop(100);
 
 
 

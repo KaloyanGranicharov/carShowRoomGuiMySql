@@ -120,12 +120,12 @@ public class CatalogScreen extends javax.swing.JFrame{
 
         try{
             Class.forName("java.sql.DriverManager");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/carShowRoomDatabase","root","12345");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/car_show_room_database","root","12345");
             Statement stmt=(Statement) con.createStatement();
 
             String carBrand=(String)jComboBox.getSelectedItem();
 
-            String sql1="select * from cardetails where car_Brand='"+carBrand+"';";
+            String sql1="select * from car_details where car_Brand='"+carBrand+"';";
             ResultSet rs1=stmt.executeQuery(sql1);
             while(rs1.next())
             {
